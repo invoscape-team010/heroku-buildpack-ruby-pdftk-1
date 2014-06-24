@@ -1,21 +1,3 @@
-#!/usr/bin/env ruby
-
-# sync output
-# $stdout.sync = true
-
-# $:.unshift File.expand_path("../../lib", __FILE__)
-# require "language_pack"
-# require "language_pack/shell_helpers"
-
-# LanguagePack::Instrument.trace 'compile', 'app.compile' do
-#   if pack = LanguagePack.detect(ARGV[0], ARGV[1])
-#     LanguagePack::ShellHelpers.initialize_env(ARGV[2])
-#     pack.topic("Compiling #{pack.name}")
-#     pack.log("compile") do
-#       pack.compile
-#     end
-#   end
-# end
 
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
@@ -26,10 +8,11 @@ echo "-----> Installing PDFTK"
 cd $1
 
 # download the mruby binary (-O) silently (-s)
-curl "https://dl-web.dropbox.com/get/Apps/jrbuildings/pdftk.tar.gz?_subject_uid=5258247&w=AAAVPMohcld5KLzcBgpN_kEJjh5CDLOrRN-oLmGfphdNcg&dl=1" -s -O
+package="https://dl.dropboxusercontent.com/s/epbh4imgey0ayv1/pdftk.tar.gz?dl=1"
+curl $package -s -O
 
 # make a directory to untar (like unzip) the binary
 mkdir -p vendor/pdftk
 
 # untar the binary to the directory we want
-tar -C vendor/pdftk -xvf gs.tgz
+tar -C vendor/pdftk -xvf pdftk.tgz
