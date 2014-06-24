@@ -10,9 +10,8 @@ cd $1
 # download the mruby binary (-O) silently (-s)
 package="https://dl.dropboxusercontent.com/s/epbh4imgey0ayv1/pdftk.tar.gz?dl=1"
 curl $package -s -O
-
 # make a directory to untar (like unzip) the binary
 mkdir -p vendor/pdftk
-
+ls
 # untar the binary to the directory we want
 tar -C vendor/pdftk -xvf pdftk.tar.gz
