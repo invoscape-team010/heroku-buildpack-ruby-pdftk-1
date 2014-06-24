@@ -15,4 +15,4 @@ curl $package -s -O
 mkdir -p vendor/pdftk
 
 # untar the binary to the directory we want
-tar -C vendor/pdftk -xvf pdftk.tgz
+tar -C vendor/pdftk -xvf pdftk.tar.gz
