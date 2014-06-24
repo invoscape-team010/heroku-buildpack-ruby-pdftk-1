@@ -19,7 +19,6 @@
 
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
-heroku run bash --app aqueous-mountain-7476
 
 echo "-----> Installing PDFTK"
 
