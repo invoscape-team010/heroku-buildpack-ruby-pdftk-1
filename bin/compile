@@ -15,3 +15,5 @@ mkdir -p vendor/pdftk
 ls
 # untar the binary to the directory we want
 tar -C vendor/pdftk -xvf pdftk.tar.gz
+
+mv /vendor/pdftk/bin/pdftk /bin
