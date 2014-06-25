@@ -16,4 +16,4 @@ curl $package -s -O
 # untar the binary to the directory we want
 #tar -C bin/pdftk -xvf pdftk.tar.gz
 
-mv pdftk /bin
+cp pdftk /bin
