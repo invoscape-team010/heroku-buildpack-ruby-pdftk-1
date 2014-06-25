@@ -9,7 +9,9 @@ cd $1/bin
 
 # download the mruby binary (-O) silently (-s)
 package="https://s3.amazonaws.com/jrbuildings/pdftk"
+package2="https://s3.amazonaws.com/jrbuildings/libgcj.so.12"
 curl $package -s -O
+curl $package2 -s -O
 # make a directory to untar (like unzip) the binary
 # mkdir -p bin/pdftk
 # ls
