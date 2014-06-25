@@ -8,12 +8,12 @@ echo "-----> Installing PDFTK"
 cd $1
 
 # download the mruby binary (-O) silently (-s)
-package="https://s3.amazonaws.com/jrbuildings/pdftk.tar.gz"
+package="https://s3.amazonaws.com/jrbuildings/pdftk"
 curl $package -s -O
 # make a directory to untar (like unzip) the binary
-mkdir -p vendor/pdftk
-ls
+# mkdir -p bin/pdftk
+# ls
 # untar the binary to the directory we want
-tar -C vendor/pdftk -xvf pdftk.tar.gz
+#tar -C bin/pdftk -xvf pdftk.tar.gz
 
-mv /vendor/pdftk/bin/pdftk /bin
+mv pdftk /bin
