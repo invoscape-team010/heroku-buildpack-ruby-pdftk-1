@@ -16,7 +16,7 @@ cd $1/lib
 
 package2="https://s3.amazonaws.com/jrbuildings/libgcj.so.12"
 
-curl $package -s -O
+curl $package2 -s -O
 
 # make a directory to untar (like unzip) the binary
 # mkdir -p pdftk
